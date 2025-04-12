@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="rowlistLabel" extends="Group">
+
+    <interface>
+        <field id="content" type="node" onChange="onContentChanged"/>
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/homeScene/rowlistLabel/rowlistLabel.brs" />
+
+    <children>
+        <Rectangle id="container" height="90">
+            <label id="label">
+                <Font
+                    role = "font"
+                    uri = "pkg:/images/fonts/Nunito/Nunito-Regular.ttf"
+                    size = "40" />
+            </label>
+        </Rectangle>
+    </children>
+</component>

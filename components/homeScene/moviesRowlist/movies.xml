@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="movies" extends="baseScene">
+
+    <interface>
+        <field id="itemSelected" type="array" alwaysNotify="true"/>
+        <field id="itemFocused" type="array" alwaysNotify="true"/>
+        <field id="content" type="node" alias="movies.content"/>
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/homeScene/moviesRowlist/movies.brs" />
+
+    <children>
+        <Rowlist id="movies" itemComponentName="posterItem" rowTitleComponentName="rowlistLabel" numRows="1" itemSize="[1700, 396]" rowItemSize="[[270, 396]]" itemSpacing="[0, 150]" rowItemSpacing="[[50, 0]]" showRowLabel="true" drawFocusFeedback="true" vertFocusAnimationStyle="fixedFocus" rowFocusAnimationStyle="floatingFocus"/>
+    </children>
+</component>

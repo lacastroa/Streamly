@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="searchScene" extends="baseScene">
+
+    <script type="text/brightscript" uri="pkg:/components/searchScene/searchScene.brs" />
+
+    <children>
+        <Rectangle id="background" color="0x1a1e22FF" width="1920" height="1080" />
+        <menu id="menu"/>
+        <moviesSearch id="markupgrid" translation="[172,200]"/>
+        <searchComponent id="searchComponent" translation="[172,77]"/>
+    </children>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="moviesSearch" extends="Group">
+
+    <interface>
+        <field id="itemSelected" type="integer"/>
+        <field id="itemFocused" type="integer"/>
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/searchScene/moviesSearchMarkupgrid/moviesSearch.brs" />
+
+    <children>
+        <MarkupGrid id="movies" itemComponentName="posterItem" numColumns="6" numRows="2" itemSize="[ 270, 396 ]" itemSpacing="[ 20, 20 ]" drawFocusFeedback="true" vertFocusAnimationStyle="floatingFocus"/>
+    </children>
+</component>

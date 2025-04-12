@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="menu" extends="Group">
+
+    <interface>
+        <field id="itemSelected" type="integer" alwaysNotify="true" />
+        <field id="content" type="node" alias="categories.content" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/homeScene/menu/menu.brs" />
+
+    <children>
+        <Rectangle id="listBackground" width="140" height="1080" color="0x2C3034FF">
+            <Poster id="logo" uri="pkg:/images/icons/logo.png" translation="[37,37]"/>
+            <MarkupList id="categories" itemComponentName="menuItem" itemSpacing="[0, 383]" translation="[30, 30]" itemSize="[78,100]" vertFocusAnimationStyle="floatingFocus" drawFocusFeedback="true" focusBitmapBlendColor="0x790C0C60" translation="[30,489]"/>
+        </Rectangle>
+    </children>
+</component>

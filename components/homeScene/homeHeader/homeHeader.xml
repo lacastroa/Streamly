@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="homeHeader" extends="Group">
+
+    <interface>
+        <field id="content" type="node" onChange="onContentChanged"/>
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/homeScene/homeHeader/homeHeader.brs" />
+
+    <children>
+        <Poster id="posterHeader" width="1780" height="1080" translation="[140, 0]" loadDisplayMode="scaleToFill">
+            <Poster id="posterMask" uri="pkg:/images/header/masks/header.png" width="1780" height="1080" loadDisplayMode="scaleToFill"/>
+            <LayoutGroup id="container1" LayoutDirection="vert" itemSpacings="[11]" vertAlignment="center" horizAlignment="left" translation="[73, 329]">
+                <Label id="titleHeader">
+                    <Font
+                        role = "font"
+                        uri = "pkg:/images/fonts/Nunito/Nunito-Bold.ttf"
+                        size = "70" />
+                </Label>
+                <LayoutGroup id="container2" LayoutDirection="horiz" itemSpacings="[30]" vertAlignment="center" horizAlignment="left">
+
+                    <Label id="dateHeader">
+                        <Font
+                            role = "font"
+                            uri = "pkg:/images/fonts/Nunito/Nunito-Bold.ttf"
+                            size = "30" />
+                    </Label>
+                    <Poster id="point1" uri="pkg:/images/icons/point.png"/>
+                    <Label id="languageHeader">
+                        <Font
+                            role = "font"
+                            uri = "pkg:/images/fonts/Nunito/Nunito-Bold.ttf"
+                            size = "30" />
+                    </Label>
+                    <Poster id="point1" uri="pkg:/images/icons/point.png"/>
+                    <Label id="itemHeader">
+                        <Font
+                            role = "font"
+                            uri = "pkg:/images/fonts/Nunito/Nunito-Bold.ttf"
+                            size = "30" />
+                    </Label>
+                </LayoutGroup>
+            </LayoutGroup>
+        </Poster>
+    </children>
+</component>

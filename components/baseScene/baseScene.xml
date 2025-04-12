@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="baseScene" extends="Group">
+
+    <interface>
+        <field id="event" type="assocarray"/>
+        <field id="initData" type="assocarray" onChange="initDataChanged" alwaysNotify="true" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/baseScene/baseScene.brs" />
+
+</component>

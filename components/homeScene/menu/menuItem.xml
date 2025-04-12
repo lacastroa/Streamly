@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="menuItem" extends="Group">
+
+    <interface>
+        <field id="itemContent" type="node" onChange="showContent" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/homeScene/menu/menuItem.brs" />
+
+    <children>
+        <Group id="expanded">
+            <Poster id="itemPoster" width="78" height="78" translation="[0,15]"/>
+        </Group>
+    </children>
+</component>

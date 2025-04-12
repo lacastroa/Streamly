@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="appButton" extends="Group">
+
+    <interface>
+        <field id="label" type="string" onChange="onLabelChanged"/>
+        <field id="icon" type="string" alias="icon.uri"/>
+        <field id="buttonSelected" type="boolean" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/button/appButton.brs" />
+
+    <children>
+        <Poster id="background" width="297" height="108">
+            <LayoutGroup id="container" LayoutDirection="horiz" itemSpacings="[37]" vertAlignment="center" horizAlignment="center" translation="[148,54]">
+                <Poster id="icon"/>
+                <Label id="label" horizAlign="center" vertAlign="center" height="80" color="0xFFFFFF" translation="[0,50]">
+                    <Font
+                        role = "font"
+                        uri = "pkg:/images/fonts/Nunito/Nunito-Bold.ttf"
+                        size = "50" />
+                </Label>
+            </LayoutGroup>
+        </Poster>
+    </children>
+</component>

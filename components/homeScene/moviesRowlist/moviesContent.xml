@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="moviesContent" extends="ContentNode">
+
+      <interface>
+            <field id="id" type="string" />
+            <field id="backdrop_path" type="string" />
+            <field id="poster_path" type="string" />
+            <field id="origin_country" type="string" />
+            <field id="genres" type="array" />
+            <field id="production_companies" type="array" />
+            <field id="vote_average" type="float" />
+            <field id="overview" type="string" />
+            <field id="release_date" type="string" />
+            <field id="original_language" type="string" />
+            <field id="itemIndex" type="integer" />
+            <field id="totalItems" type="integer" />
+      </interface>
+</component>

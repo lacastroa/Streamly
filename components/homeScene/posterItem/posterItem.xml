@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="posterItem" extends="Group">
+
+    <interface>
+        <field id="itemContent" type="node" onChange="showContent" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/homeScene/posterItem/posterItem.brs" />
+
+    <children>
+        <Rectangle id="topMenuBackground" color="0xD0BCFE30" width="250" height="396" translation="[10, 0]"/>
+        <poster id="posterImage" width="250" height="396" translation="[10, 0]" loadDisplayMode="scaleToFill" />
+    </children>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="detailsScene" extends="baseScene">
+
+    <script type="text/brightscript" uri="pkg:/components/detailsScene/detailsScene.brs" />
+
+    <children>
+        <menu id="menu"/>
+        <homeHeader id="header"/>
+        <detailsComponent id="detailsComponent"/>
+    </children>
+</component>

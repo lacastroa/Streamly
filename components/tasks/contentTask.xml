@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="contentTask" extends="Task">
+
+    <interface>
+        <field id="content" type="node" />
+        <field id="movieId" type="string" />
+    </interface>
+    
+    <script type="text/brightscript" uri="contentTask.brs" />
+</component>

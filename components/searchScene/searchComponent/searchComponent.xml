@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="searchComponent" extends="Group">
+
+    <interface>
+        <field id="text" type="integer" alias="search.text"/>
+        <field id="cursorPosition" type="integer" alias="search.cursorPosition"/>
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/searchScene/searchComponent/searchComponent.brs" />
+
+    <children>
+        <LayoutGroup id="container" LayoutDirection="horiz" itemSpacings="[20]" vertAlignment="center" horizAlignment="center" translation="[507,46]">
+            <TextEditBox id="search" backgroundUri="pkg:/images/searchBackground.png" hintText="   Search" maxTextLength="50" clearOnDownKey="false" width="900" height="90"/>
+            <Poster id="icon" uri="pkg:/images/icons/search.png"/>
+        </LayoutGroup>
+    </children>
+</component>
