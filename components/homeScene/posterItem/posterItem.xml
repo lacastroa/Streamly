@@ -8,7 +8,7 @@
     <script type="text/brightscript" uri="pkg:/components/homeScene/posterItem/posterItem.brs" />
 
     <children>
-        <Rectangle id="topMenuBackground" color="0xD0BCFE30" width="250" height="396" translation="[10, 0]"/>
-        <poster id="posterImage" width="250" height="396" translation="[10, 0]" loadDisplayMode="scaleToFill" />
+        <Rectangle id="topMenuBackground" color="0xD0BCFE30" width="252" height="396" translation="[12, 0]"/>
+        <poster id="posterImage" width="252" height="396" translation="[12, 0]" loadDisplayMode="scaleToFill" />
     </children>
 </component>

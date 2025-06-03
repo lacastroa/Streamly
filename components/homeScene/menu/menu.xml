@@ -10,8 +10,8 @@
 
     <children>
         <Rectangle id="listBackground" width="140" height="1080" color="0x2C3034FF">
-            <Poster id="logo" uri="pkg:/images/icons/logo.png" translation="[37,37]"/>
-            <MarkupList id="categories" itemComponentName="menuItem" itemSpacing="[0, 383]" translation="[30, 30]" itemSize="[78,100]" vertFocusAnimationStyle="floatingFocus" drawFocusFeedback="true" focusBitmapBlendColor="0x790C0C60" translation="[30,489]"/>
+            <Poster id="logo" uri="pkg:/images/icons/logo.png" translation="[36,36]"/>
+            <MarkupList id="categories" itemComponentName="menuItem" itemSpacing="[0, 381]" translation="[30, 30]" itemSize="[78,99]" vertFocusAnimationStyle="floatingFocus" drawFocusFeedback="true" focusBitmapBlendColor="0x790C0C60" translation="[30,489]"/>
         </Rectangle>
     </children>
 </component>

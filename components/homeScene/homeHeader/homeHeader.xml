@@ -8,9 +8,9 @@
     <script type="text/brightscript" uri="pkg:/components/homeScene/homeHeader/homeHeader.brs" />
 
     <children>
-        <Poster id="posterHeader" width="1780" height="1080" translation="[140, 0]" loadDisplayMode="scaleToFill">
-            <Poster id="posterMask" uri="pkg:/images/header/masks/header.png" width="1780" height="1080" loadDisplayMode="scaleToFill"/>
-            <LayoutGroup id="container1" LayoutDirection="vert" itemSpacings="[11]" vertAlignment="center" horizAlignment="left" translation="[73, 329]">
+        <Poster id="posterHeader" width="1779" height="1080" translation="[140, 0]" loadDisplayMode="scaleToFill">
+            <Poster id="posterMask" uri="pkg:/images/header/masks/header.png" width="1779" height="1080" loadDisplayMode="scaleToFill"/>
+            <LayoutGroup id="container1" LayoutDirection="vert" itemSpacings="[12]" vertAlignment="center" horizAlignment="left" translation="[72, 327]">
                 <Label id="titleHeader">
                     <Font
                         role = "font"
