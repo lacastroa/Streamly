@@ -11,9 +11,9 @@
 
     <children>
         <Poster id="background" width="297" height="108">
-            <LayoutGroup id="container" LayoutDirection="horiz" itemSpacings="[37]" vertAlignment="center" horizAlignment="center" translation="[148,54]">
+            <LayoutGroup id="container" LayoutDirection="horiz" itemSpacings="[36]" vertAlignment="center" horizAlignment="center" translation="[147,54]">
                 <Poster id="icon"/>
-                <Label id="label" horizAlign="center" vertAlign="center" height="80" color="0xFFFFFF" translation="[0,50]">
+                <Label id="label" horizAlign="center" vertAlign="center" height="78" color="0xFFFFFF" translation="[0,48]">
                     <Font
                         role = "font"
                         uri = "pkg:/images/fonts/Nunito/Nunito-Bold.ttf"

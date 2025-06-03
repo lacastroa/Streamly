@@ -6,7 +6,7 @@
     <children>
         <Rectangle id="background1" color="0x1a1e22FF" width="1920" height="1080" />
         <homeHeader id="header"/>
-        <movies id="movies" translation="[200, 550]" />
+        <movies id="movies" translation="[198, 549]" />
         <menu id="menu"/>
     </children>
 </component>

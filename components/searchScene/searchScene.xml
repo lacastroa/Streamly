@@ -6,7 +6,7 @@
     <children>
         <Rectangle id="background" color="0x1a1e22FF" width="1920" height="1080" />
         <menu id="menu"/>
-        <moviesSearch id="markupgrid" translation="[172,200]"/>
-        <searchComponent id="searchComponent" translation="[172,77]"/>
+        <moviesSearch id="markupgrid" translation="[171,201]"/>
+        <searchComponent id="searchComponent" translation="[171,78]"/>
     </children>
 </component>

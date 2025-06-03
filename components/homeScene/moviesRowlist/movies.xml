@@ -10,6 +10,6 @@
     <script type="text/brightscript" uri="pkg:/components/homeScene/moviesRowlist/movies.brs" />
 
     <children>
-        <Rowlist id="movies" itemComponentName="posterItem" rowTitleComponentName="rowlistLabel" numRows="1" itemSize="[1700, 396]" rowItemSize="[[270, 396]]" itemSpacing="[0, 150]" rowItemSpacing="[[50, 0]]" showRowLabel="true" drawFocusFeedback="true" vertFocusAnimationStyle="fixedFocus" rowFocusAnimationStyle="floatingFocus"/>
+        <Rowlist id="movies" itemComponentName="posterItem" rowTitleComponentName="rowlistLabel" numRows="1" itemSize="[1701, 396]" rowItemSize="[[270, 396]]" itemSpacing="[0, 150]" rowItemSpacing="[[48, 0]]" showRowLabel="true" drawFocusFeedback="true" vertFocusAnimationStyle="fixedFocus" rowFocusAnimationStyle="floatingFocus"/>
     </children>
 </component>
