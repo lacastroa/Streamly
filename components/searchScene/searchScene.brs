@@ -1,16 +1,21 @@
 sub init()
-    m.movies = m.top.findNode("movies")
+    m.movies = m.top.findNode("moviess")
     m.leftMenu = m.top.findNode("menu")
     m.searchComponent = m.top.findNode("searchComponent")
 
     setMenuContent()
 
     m.contentTask = createObject("roSGNode", "contentTask")
-    m.contentTask.functionName = "getSearchcontent"
+    m.contentTask.functionName = "getSearchContent"
     m.contentTask.control = "RUN"
+
     m.contentTask.observeField("content", "setContent")
+    m.contentTask.control = "RUN"
+
     m.top.observeField("focusedChild", "onFocusChanged")
     m.leftMenu.observeField("itemSelected", "onItemMenuSelected")
+    m.searchComponent.observeField("text", "onSearchTextChanged")
+       m.movies.observeField("itemSelected", "onItemSelected")
 
     m.searchComponent.setFocus(true)
     m.lastItemFocused = m.searchComponent
@@ -39,6 +44,21 @@ sub setContent(event as object)
     m.contentTask = invalid
 end sub
 
+sub onSearchTextChanged()
+    if m.contentTask = invalid then
+        userSearch = m.searchComponent.text
+        m.contentTask = createObject("roSGNode", "contentTask")
+        m.contentTask.userSearch = userSearch
+        m.contentTask.observeField("content", "setContent")
+        if userSearch <> "" then
+            m.contentTask.functionName = "getSearchContent1"
+        else
+            m.contentTask.functionName = "getSearchContent"
+        end if
+        m.contentTask.control = "RUN"
+    end if
+end sub
+
 sub onItemMenuSelected(event as object)
     itemSelected = event.getData()
     if itemSelected <> 1 then
@@ -50,11 +70,18 @@ sub onItemMenuSelected(event as object)
 end sub
 
 sub onItemSelected(event as object)
+    eventData = event.getData()
+    itemContent = m.movies.content.getChild(eventData)
     m.top.event = {
-        type: "VIDEO_PLAYER"
-        data: {}
+        type: "MOVIE_DETAILS"
+        data: {
+            movieID: itemContent.id,
+            itemIndex: eventData + 1,
+            totalItems: m.movies.content.getChildCount()
+        }
     }
 end sub
+
 
 sub onFocusChanged()
     if m.top.hasFocus() = true then
