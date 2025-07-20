@@ -7,6 +7,7 @@ sub getJsonFile()
     m.top.content = jsonObject
 end sub
 
+
 sub setRequest(url as string)
     headers = {
         "Accept": "application/json"
@@ -55,8 +56,25 @@ sub getMovie()
     m.top.content = movieContent
 end sub
 
-sub getSearchcontent()
-    setRequest("https://api.themoviedb.org/3/movie/popular")
+sub getSearchContent()
+ setRequest("https://api.themoviedb.org/3/movie/popular")
+    response = m.urlTransfer.getToString()
+    json = ParseJson(response)
+
+    content = CreateObject("RoSGNode", "ContentNode")
+
+    for each item in json.results
+        contentChild = CreateObject("RoSGNode", "moviesContent")
+        contentChild.update(item)
+        content.appendChild(contentChild)
+    end for
+
+    m.top.content = content
+end sub
+
+
+sub getSearchContent1()
+ setRequest("https://api.themoviedb.org/3/search/movie?query=" + m.top.userSearch)
     response = m.urlTransfer.getToString()
     json = ParseJson(response)
 
