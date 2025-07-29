@@ -9,6 +9,6 @@
     <script type="text/brightscript" uri="pkg:/components/searchScene/moviesSearchMarkupgrid/moviesSearch.brs" />
 
     <children>
-        <MarkupGrid id="movies" itemComponentName="posterItem" numColumns="6" numRows="2" itemSize="[ 270, 396 ]" itemSpacing="[ 21, 21 ]" drawFocusFeedback="true" vertFocusAnimationStyle="floatingFocus"/>
+        <MarkupGrid id="moviess" itemComponentName="posterItem" numColumns="6" numRows="2" itemSize="[ 270, 396 ]" itemSpacing="[ 21, 21 ]" drawFocusFeedback="true" vertFocusAnimationStyle="floatingFocus"/>
     </children>
 </component>
