@@ -4,6 +4,7 @@
     <interface>
         <field id="itemSelected" type="integer" alwaysNotify="true" />
         <field id="content" type="node" alias="categories.content" />
+        <field id="event" type="assocarray" />
     </interface>
 
     <script type="text/brightscript" uri="pkg:/components/homeScene/menu/menu.brs" />

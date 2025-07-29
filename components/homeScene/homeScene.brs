@@ -7,12 +7,10 @@ sub init()
     m.contentTask.functionName = "getPopularMovies"
     m.contentTask.control = "RUN"
 
-    setMenuContent()
-
     m.top.observeField("focusedChild", "onFocusChanged")
     m.movies.observeField("itemFocused", "onItemFocused")
     m.movies.observeField("itemSelected", "onItemSelected")
-    m.menu.observeField("itemSelected", "onItemMenuSelected")
+    m.menu.observeField("event", "onEventChanged")
     m.contentTask.observeField("content", "setContent")
 
     content = createObject("roSGNode", "moviesContent")
@@ -22,19 +20,9 @@ sub init()
     m.lastItemFocused = m.movies
 end sub
 
-sub setMenuContent()
-    menuContent = createObject("roSGNode", "ContentNode")
-    menuItem1 = createObject("roSGNode", "ContentNode")
-    menuItem1.setFields({
-        HDPosterUrl: "pkg:/images/icons/home.png"
-    })
-    menuItem2 = createObject("roSGNode", "ContentNode")
-    menuItem2.setFields({
-        HDPosterUrl: "pkg:/images/icons/search.png"
-    })
-    menuContent.appendChild(menuItem1)
-    menuContent.appendChild(menuItem2)
-    m.menu.content = menuContent
+sub onEventChanged(event as object)
+    eventMenu = event.getData()
+    m.top.event = eventMenu
 end sub
 
 sub setContent(event as object)
@@ -58,15 +46,6 @@ sub onItemFocused(event as object)
     m.header.content = itemContent
 end sub
 
-sub onItemMenuSelected(event as object)
-    itemSelected = event.getData()
-    if itemSelected <> 0 then
-        m.top.event = {
-            type: "SEARCH"
-            data: {}
-        }
-    end if
-end sub
 
 sub onItemSelected(event as object)
     eventData = event.getData()
