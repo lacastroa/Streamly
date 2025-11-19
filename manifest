@@ -7,8 +7,8 @@ build_version=2
 ui_resolutions=fhd
 
 # Channel Assets
-mm_icon_focus_hd=pkg:/images/channel_icon_hd.png
-mm_icon_focus_sd=pkg:/images/channel_icon_sd.png
+mm_icon_focus_fhd=pkg:/images/channel_icon_hd.png
+mm_icon_focus_hd=pkg:/images/channel_icon_sd.png
 
 # Splash Screen
 splash_screen_fhd=pkg:/images/splash_screen_fhd.png
