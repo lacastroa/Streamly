@@ -40,6 +40,7 @@ sub onItemMenuSelected(event as object)
             type: "HOME"
             data: {}
         }
+        ? "home selected"
 
     end if
 end sub

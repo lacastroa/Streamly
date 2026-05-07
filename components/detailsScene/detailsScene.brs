@@ -4,12 +4,12 @@ sub init()
     m.play = m.top.findNode("play")
     m.detailsComponent = m.top.findNode ("detailsComponent")
 
-    setMenuContent()
+    ' setMenuContent()
 
     m.contentTask = createObject("roSGNode", "contentTask")
 
     m.top.observeField("focusedChild", "onFocusChanged")
-    m.menu.observeField("itemSelected", "onItemSelected")
+    m.menu.observeField("event", "onEventChanged")
     m.contentTask.observeField("content", "setContent")
 
     m.play.setFocus(true)
@@ -29,15 +29,15 @@ sub initDataChanged(event as object)
     end if
 end sub
 
-sub setMenuContent()
-    menuContent = createObject("roSGNode", "ContentNode")
-    menuItem = createObject("roSGNode", "ContentNode")
-    menuItem.setFields({
-        HDPosterUrl: "pkg:/images/icons/back.png"
-    })
-    menuContent.appendChild(menuItem)
-    m.menu.content = menuContent
-end sub
+' sub setMenuContent()
+'     menuContent = createObject("roSGNode", "ContentNode")
+'     menuItem = createObject("roSGNode", "ContentNode")
+'     menuItem.setFields({
+'         HDPosterUrl: "pkg:/images/icons/back.png"
+'     })
+'     menuContent.appendChild(menuItem)
+'     m.menu.content = menuContent
+' end sub
 
 sub setContent(event as object)
     data = event.getData()
@@ -52,11 +52,9 @@ sub setContent(event as object)
     m.contentTask = invalid
 end sub
 
-sub onItemSelected(event as object)
-    m.top.event = {
-        type: "BACK"
-        data: {}
-    }
+sub onEventChanged(event as object)
+    eventMenu = event.getData()
+    m.top.event = eventMenu
 end sub
 
 sub onFocusChanged()
@@ -74,9 +72,10 @@ sub onKeyEvent(key as string, press as boolean) as boolean
             m.lastItemFocused = m.play
             handled = true
         else if key = "left" and m.play.isInFocusChain() then
-            handled = true
             m.menu.setFocus(true)
+            ? "menu seleccionado"
             m.lastItemFocused = m.menu
+            handled = true
         end if
     end if
 
