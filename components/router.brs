@@ -19,21 +19,21 @@ function _navigateToScene(name as string, data = {} as object, removeCurrentScen
     scene.initData = data
     scene.observeField("event", "onSceneEvent")
 
-    if m.history.count() > 0 and removeCurrentScene = true then
+    if m.history.count() > 0 then
         if removeCurrentScene = true then
             removeScene(m.history.pop())
         else
-            removeScene(m.history.peek())
+            currentScene = m.history.peek()
+            currentScene.visible = false
+            currentScene.unobserveField("event")
         end if
-    else if m.history.count() > 0 then
-        currentScene = m.history.peek()
-        currentScene.visible = false
-        currentScene.unobserveField("event")
     end if
 
     m.history.push(scene)
     m.scenes.appendChild(scene)
     scene.setFocus(true)
+
+    print m.history
 
     return scene
 end function
